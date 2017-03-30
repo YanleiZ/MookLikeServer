@@ -31,6 +31,10 @@ public class VideosServiceImpl implements VideosService {
 	public List<Videos> search(String str) {
 		return videosDao.query(str);
 	}
+	
+	public List<Videos> searchAll() {
+		return videosDao.queryAll();
+	}
 
 	public void setVideosDao(VideosDao videosDao) {
 		this.videosDao = videosDao;

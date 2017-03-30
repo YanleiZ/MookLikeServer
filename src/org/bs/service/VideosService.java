@@ -15,4 +15,6 @@ public interface VideosService {
 	public Videos findByUserId(int id);
 
 	public List<Videos> search(String str);
+	
+	public List<Videos> searchAll();
 }

@@ -13,6 +13,8 @@ public interface VideosDao {
 	public Videos getById(int id);
 
 	public List<Videos> query(String str);
+	
+	public List<Videos> queryAll();
 
 	public Videos getByUserId(int id);
 }
