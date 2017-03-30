@@ -184,8 +184,6 @@ public class VideosDaoImpl extends BaseDao implements VideosDao {
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, PageContext.getPage().getPageIndex());
-			pstmt.setInt(2, PageContext.getPage().getPageSize());
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				Videos videos = new Videos();

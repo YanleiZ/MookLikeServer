@@ -8,5 +8,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="lib" path="/Users/Yanlei/JavaWeb/apache-tomcat-9/lib/jsp-api.jar"/>
 	<classpathentry kind="lib" path="/Users/Yanlei/JavaWeb/apache-tomcat-9/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/fastjson-1.2.30.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
