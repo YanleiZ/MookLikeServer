@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><beans>
+	<bean id="userDao" class="org.bs.dao.impl.UserDaoImpl"/>
+	<bean id="userService" class="org.bs.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"/>
+	</bean>
+	<bean id="roleDao" class="org.bs.dao.impl.RoleDaoImpl"/>
+	<bean id="roleService" class="org.bs.service.impl.RoleServiceImpl">
+	<property name="roleDao" ref="roleDao"/>
+	</bean>
+	<bean id="memberDao" class="org.bs.dao.impl.MemberDaoImpl"/>
+	<bean id="memberService" class="org.bs.service.impl.MemberServiceImpl">
+		<property name="memberDao" ref="memberDao"/>
+	</bean>
+	<bean id="adminsDao" class="org.bs.dao.impl.AdminsDaoImpl"/>
+	<bean id="adminsService" class="org.bs.service.impl.AdminsServiceImpl">
+		<property name="adminsDao" ref="adminsDao"/>
+	</bean>
+	<bean id="courseDao" class="org.bs.dao.impl.CourseDaoImpl"/>
+	<bean id="courseService" class="org.bs.service.impl.CourseServiceImpl">
+		<property name="courseDao" ref="courseDao"/>
+	</bean>
+	<bean id="pptsDao" class="org.bs.dao.impl.PptsDaoImpl"/>
+	<bean id="pptsService" class="org.bs.service.impl.PptsServiceImpl">
+		<property name="pptsDao" ref="pptsDao"/>
+	</bean>
+	<bean id="videosDao" class="org.bs.dao.impl.VideosDaoImpl"/>
+	<bean id="videosService" class="org.bs.service.impl.VideosServiceImpl">
+		<property name="videosDao" ref="videosDao"/>
+	</bean>
+	<bean id="wordsDao" class="org.bs.dao.impl.WordsDaoImpl"/>
+	<bean id="wordsService" class="org.bs.service.impl.WordsServiceImpl">
+		<property name="wordsDao" ref="wordsDao"/>
+	</bean>
+	<bean id="testsDao" class="org.bs.dao.impl.TestsDaoImpl"/>
+	<bean id="testsService" class="org.bs.service.impl.TestsServiceImpl">
+		<property name="testsDao" ref="testsDao"/>
+	</bean>
+	<bean id="doneTestDao" class="org.bs.dao.impl.DoneTestDaoImpl"/>
+	<bean id="doneTestService" class="org.bs.service.impl.DoneTestServiceImpl">
+		<property name="doneTestDao" ref="doneTestDao"/>
+	</bean>
+	<bean id="indexDao" class="org.bs.dao.impl.IndexDaoImpl"/>
+	<bean id="indexService" class="org.bs.service.impl.IndexServiceImpl">
+		<property name="indexDao" ref="indexDao"/>
+	</bean>
+	<bean id="newsDao" class="org.bs.dao.impl.NewsDaoImpl"/>
+	<bean id="newsService" class="org.bs.service.impl.NewsServiceImpl">
+		<property name="newsDao" ref="newsDao"/>
+	</bean>
+</beans>
