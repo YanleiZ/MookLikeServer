@@ -174,4 +174,37 @@ public class VideosDaoImpl extends BaseDao implements VideosDao {
 		}
 		return list;
 	}
+	
+	public List<Videos> queryAll() {
+		List<Videos> list = new ArrayList<Videos>();
+		Connection conn = ConnContext.getConn();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from t_videos ";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, PageContext.getPage().getPageIndex());
+			pstmt.setInt(2, PageContext.getPage().getPageSize());
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				Videos videos = new Videos();
+				videos.setId(rs.getInt("id"));
+				videos.setName(rs.getString("name"));
+				videos.setSettime(rs.getTimestamp("settime"));
+				videos.setCourse(courseDao.getById(rs.getInt("course")));
+				videos.setDescp(rs.getString("descp"));
+				videos.setDocts(rs.getString("docts"));
+				videos.setContent(rs.getString("content"));
+				videos.setImg(rs.getString("img"));
+				list.add(videos);
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		} finally {
+			DB.close(pstmt);
+			DB.close(rs);
+		}
+		return list;
+	}
 }
