@@ -22,6 +22,7 @@ public class AppGetVideoServlet extends BaseServlet {
 		super.get(request, response);
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		System.out.println("===");
 		
 	}
 	public void setVideosService(VideosService videosService) {
